@@ -8,6 +8,9 @@ module.exports = {
     debugScreens: {
       position: ['top', 'left']
     },
+    // spacing: {
+    //     13: '3.25rem' //total overwrite
+    //   },
     extend: {
       fontFamily: {
         // by this we defined our own font -> nice
@@ -17,7 +20,10 @@ module.exports = {
         // mainColor is our name, we can put it whatever we want
         // so we extended again the tailwin! nice!
         mainColor: '#1E293B'
-      }
+      },
+      // spacing: {
+      //   13: '3.25rem' 
+      // },
     },
   },
   variants: {
