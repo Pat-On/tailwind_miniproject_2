@@ -1,6 +1,8 @@
 // importing additional color palette
 // const colors = require("tailwindcss/colors");
 
+const { green } = require("tailwindcss/colors");
+
 module.exports = {
   presets: [require("./news_styles")],
   purge: {
@@ -19,6 +21,7 @@ module.exports = {
     },
     container: {
       center: true,
+
       padding: {
         DEFAULT: "0.5rem",
         sm: "1rem",
@@ -27,15 +30,39 @@ module.exports = {
         "2xl": "4rem",
       },
     },
-    extend: {},
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              fontWeight: "600",
+              // color: 'red'
+            },
+            h2: {
+              fontWeight: "600",
+            },
+          },
+        },
+        sm: {
+          css: {
+            h2: {
+              color: 'green',
+            },
+          },
+        },
+      },
+    },
   },
   // extending variants! nice!
   variants: {
     // if we are going to put something not inside extend we will have posibility to remove variants
-    backgroundColor: ['dark', 'group-hover', 'focus-within', 'hover', 'focus'],
+    backgroundColor: ["dark", "group-hover", "focus-within", "hover", "focus"],
     extend: {
-      width: ['hover']
+      width: ["hover"],
     },
   },
-  plugins: [require("tailwindcss-debug-screens")],
+  plugins: [
+    require("tailwindcss-debug-screens"),
+    require("@tailwindcss/typography"),
+  ],
 };

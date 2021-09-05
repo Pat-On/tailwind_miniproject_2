@@ -11,7 +11,15 @@
   }
   body {
   }
+
+  .typo {
+    @apply prose prose-xl shadow-sm desktop:prose-sm tablet:prose-lg prose-red max-w-min;
+  }
   .container {
+  }
+
+  h2 {
+    font-size: 2em !important;
   }
 
   /* h1 {
